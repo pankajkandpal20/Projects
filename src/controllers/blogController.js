@@ -136,13 +136,13 @@ const updateBlog = async function (req, res) {
         ///edgeCase 3...body content should be greater than 50
         if (body) {
             if (body.length < 5)
-                return res.status(400).send({ statut: false, msg: "body content is too short...add some more content", });
+                return res.status(400).send({ status: false, msg: "body content is too short...add some more content", });
         }
 
         //edgeCase 4 -- if title is present than it should not be empty
         if (title != null) {
             if (title.length == 0)
-                return res.status(400).send({ statut: false, msg: "Title is used but it is empty" });
+                return res.status(400).send({ status: false, msg: "Title is used but it is empty" });
         }
 
         if (title || body || tags || subcategory) {

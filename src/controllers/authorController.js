@@ -9,7 +9,7 @@ const validator = require('../validator/validator');
 const createAuthor = async function (req, res) {
     try {
         let data = req.body;
-        let { fname, lname, title, email, password } = data
+        let { fname, lname, title, email, password } = data 
 
         //edge case-1 
         let isEmptyBody = validator.isValidBody(data);
